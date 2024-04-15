@@ -15,10 +15,11 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+// mongoose.connect(process.env.MONGODB_URI, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// });
+mongoose.connect(process.env.MONGODB_URI);
 
 const db = mongoose.connection;
 
